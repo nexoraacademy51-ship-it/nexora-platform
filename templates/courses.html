@@ -1,8 +1,95 @@
-<h1>🎓 Nexora Courses</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nexora Courses</title>
+
+<style>
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f7fa;
+    margin:0;
+}
+
+.header{
+    background:#0f172a;
+    color:white;
+    padding:20px;
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    margin-top:30px;
+}
+
+.course{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.course h2{
+    margin-top:0;
+}
+
+.empty{
+    text-align:center;
+    color:gray;
+    font-size:20px;
+    margin-top:50px;
+}
+
+.back{
+    display:inline-block;
+    margin-top:20px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+🎓 Nexora Academy Courses
+</div>
+
+<div class="container">
+
+{% if courses %}
 
 {% for course in courses %}
-    <div style="border:1px solid #ccc; padding:10px; margin:10px;">
-        <h2>{{ course[0] }}</h2>
-        <p>{{ course[1] }}</p>
-    </div>
+
+<div class="course">
+
+<h2>{{ course[0] }}</h2>
+
+<p>{{ course[1] }}</p>
+
+</div>
+
 {% endfor %}
+
+{% else %}
+
+<div class="empty">
+لا توجد دورات حالياً.
+</div>
+
+{% endif %}
+
+<a class="back" href="/">⬅ العودة للرئيسية</a>
+
+</div>
+
+</body>
+</html>
