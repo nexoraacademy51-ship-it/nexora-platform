@@ -1,0 +1,8 @@
+<h1>🎓 Nexora Courses</h1>
+
+{% for course in courses %}
+    <div style="border:1px solid #ccc; padding:10px; margin:10px;">
+        <h2>{{ course[0] }}</h2>
+        <p>{{ course[1] }}</p>
+    </div>
+{% endfor %}
