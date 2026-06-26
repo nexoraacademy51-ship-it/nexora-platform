@@ -1,25 +1,117 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>
+    <title>Nexora Login</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e1b4b);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: white;
+            width: 340px;
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            animation: fadeIn 0.6s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .logo {
+            width: 70px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin: 5px 0;
+            color: #1e1b4b;
+        }
+
+        p {
+            font-size: 13px;
+            color: gray;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #4f46e5;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #4f46e5;
+            border: none;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #3730a3;
+        }
+
+        .privacy {
+            margin-top: 12px;
+            font-size: 12px;
+        }
+
+        .privacy a {
+            color: #4f46e5;
+            text-decoration: none;
+        }
+    </style>
 </head>
+
 <body>
 
-<h1>Welcome Back</h1>
+<div class="card">
 
-<form>
+    <img src="/static/nexora.png" class="logo">
 
-<input type="email" placeholder="Email"><br><br>
+    <h2>Nexora Academy</h2>
+    <p>Sign in to continue learning</p>
 
-<input type="password" placeholder="Password"><br><br>
+    <form method="POST">
 
-<button>Login</button>
+        <input type="text" name="username" placeholder="Username" required>
 
-</form>
+        <input type="password" name="password" placeholder="Password" required>
 
-<br>
+        <button type="submit">Login</button>
 
-<a href="/">Back to Home</a>
+    </form>
+
+    <div class="privacy">
+        By continuing you accept our
+        <a href="/privacy">Privacy Policy</a>
+    </div>
+
+</div>
 
 </body>
 </html>
