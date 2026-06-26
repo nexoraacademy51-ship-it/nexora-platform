@@ -1,6 +1,156 @@
-<h1>👑 Nexora Admin Panel</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nexora Admin Panel</title>
 
-<ul>
-    <li><a href="/admin/dashboard">📊 Dashboard</a></li>
-    <li><a href="/admin/add-course">➕ Add Course</a></li>
-</ul>
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#0f172a;
+    color:white;
+}
+
+.header{
+    background:#1e293b;
+    padding:20px;
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    margin-top:30px;
+}
+
+.cards{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    flex:1;
+    min-width:200px;
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.card h2{
+    margin:10px 0;
+}
+
+.menu{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.box{
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.box a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+👑 Nexora Academy Admin Panel
+</div>
+
+<div class="container">
+
+<div class="cards">
+
+<div class="card">
+<h3>👥 Users</h3>
+<h2>{{ users }}</h2>
+</div>
+
+<div class="card">
+<h3>🎓 Courses</h3>
+<h2>{{ courses }}</h2>
+</div>
+
+<div class="card">
+<h3>💰 Sales</h3>
+<h2>0</h2>
+</div>
+
+<div class="card">
+<h3>⭐ NexPoints</h3>
+<h2>0</h2>
+</div>
+
+</div>
+
+<div class="menu">
+
+<div class="box">
+<a href="/admin/dashboard">📊 Dashboard</a>
+</div>
+
+<div class="box">
+<a href="/admin/add-course">🎓 Add Course</a>
+</div>
+
+<div class="box">
+<a href="#">👥 Members</a>
+</div>
+
+<div class="box">
+<a href="#">📚 Books</a>
+</div>
+
+<div class="box">
+<a href="#">💰 Products</a>
+</div>
+
+<div class="box">
+<a href="#">💸 Withdrawals</a>
+</div>
+
+<div class="box">
+<a href="#">🏆 Levels</a>
+</div>
+
+<div class="box">
+<a href="#">🎁 Rewards</a>
+</div>
+
+<div class="box">
+<a href="#">📢 Announcements</a>
+</div>
+
+<div class="box">
+<a href="#">⚙ Settings</a>
+</div>
+
+<div class="box">
+<a href="#">📈 Statistics</a>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
